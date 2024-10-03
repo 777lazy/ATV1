@@ -1,0 +1,39 @@
+body {
+    background-color:#000;
+}
+.principal {
+    margin: 30px 58px;
+    padding: 20px;
+}
+h1 {
+    font-size: 60px;
+    color: #fff;
+}
+h1 > span {
+    color: #3aa0ff;
+    text-decoration: u;
+    background-color: #00000000;
+}
+span {
+    background-color: #3aa0ff;
+}
+h2, h3, h4 {
+    font-size: 35px;
+    color: #fff;
+}
+ol > h3, h4, h5, h6 {
+    font-size: 30px;
+    color: #ffffff;
+}
+p {
+    font-size: 19px;
+    color: #fff;
+    text-align: center;
+}
+ol {
+    list-style: georgian;
+    color: #3aa0ff;
+}
+.texto {
+    margin: 0 100px;
+}
