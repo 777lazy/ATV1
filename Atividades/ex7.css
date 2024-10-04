@@ -1,0 +1,44 @@
+body {
+    background-color: #ffffff;
+}
+.tudo {
+    margin: 2% 6%;
+    padding: 2%;
+}
+h1 {
+    text-align: center;
+    color: #464646;
+    font-size: 40px;
+}
+span{
+    color: #ff6600;
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 45px 80px;
+}
+.inicio > p{
+    width: 350px;
+    font-size: 22px;
+    color: #464646;
+}
+.principal{
+    color: #464646;
+}
+h2{
+    font-size: 32px;
+    color: #ff6600;
+}
+ul{
+    font-size: 22px;
+    list-style: #464646;
+}
+ol{
+    font-size: 22px;
+    list-style: #000000;
+    width: 800px;
+    margin: 40px;
+}
