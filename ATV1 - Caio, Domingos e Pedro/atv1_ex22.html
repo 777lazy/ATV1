@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 2</title>
+</head>
+<style>
+    .formu{
+        font-size: 20px;
+        padding: 5%;
+    }
+    table, th, td{
+        padding: 10px;
+        border: 1px solid black;
+        text-align: start;
+        border-spacing: 5px;
+    }
+</style>
+<body>
+    <div class="formu">
+        <form action="">
+            <table>
+                <tr>
+                    <th><label for="nome">Nome:</label></th>
+                    <td><input type="text" id="nome" name="nome" required></td>
+                </tr>
+                <tr>
+                    <th><label for="sexo">Sexo:</label></th>
+                    <td>
+                        <input type="radio" id="masc" name="sexo" value="Masculino">
+                        <label for="masc">Masculino</label>
+                        <input type="radio" id="fem" name="sexo" value="Feminino">
+                        <label for="fem">Feminino</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"><label for="escola">Escolaridade:</label>
+                        <select name="escola" id="escola" required>
+                        <option value="grau1">1º Grau</option>
+                        <option value="grau2">2º Grau</option>
+                        <option value="superior">Superior</option>
+                    </select>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

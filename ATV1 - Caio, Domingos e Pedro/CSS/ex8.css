@@ -1,0 +1,137 @@
+/*ESTILO GERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vollkorn", serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #000000;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*CABEÇALHO*/
+header{
+    padding: 40px 4%;    
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo i{
+    font-size: 50px;
+    color: #ffffff;
+}
+header a{
+    color: #3f3f3f;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header i{
+    color: #ffff;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    display: inline-block;
+    padding: 0 28px;
+}
+header a:hover{
+    transform: scale(1.20);
+    color: #ffff;
+}
+
+header nav{
+    display: inline-block;
+    padding: 0 40px;
+}
+header .btn-darlig button{
+    padding: 12px 13px 10px;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: #0099ff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+}
+header .btn-darlig button:hover{
+    transform: scale(1.20);
+}
+/*INICIO*/
+.inicio h1 {
+    text-align: center;
+    font-size: 65px;
+    line-height: 54px;
+    margin: 30px 0;
+}
+.inicio h1 span {
+    color: #0099ff;
+}
+.inicio h2{
+    padding: 22px 0;
+    font-size: 50px;
+    margin: 40px 0;
+}
+.inicio h2 span{
+    color: #0099ff;
+}
+.inicio a{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    margin: 20px 0;
+}
+.inicio a:hover{
+    transform: scale(1.05);
+}
+.inicio ul{
+    padding: 0 0 0 22px;
+    list-style: none;
+}
+.inicio ul li h3{
+    font-size: 28px;
+}
+.inicio p{
+    font-size: 20px;
+}
+/*SECAO FEEDBACK*/
+.secao2 {
+    background-color: #24262a;
+    height: 500px;
+}
+.forms form{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.forms form input{
+    background-color: #0099ff;
+    color: #ffff;
+
+}
+.forms form textarea{
+    padding: 15px;
+    font-size: 25px;
+}
+.forms h4{
+    font-size: 50px;
+    text-align: center;
+    padding: 78px;
+}
+.forms h4 span{
+    color: #0099ff;
+}
