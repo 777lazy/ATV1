@@ -1,5 +1,3 @@
-#cadastro vôlei
-
 from datetime import datetime
 
 jogadores = []
@@ -82,28 +80,38 @@ def imprimir_jogador(jogador):
     print(f"Posição:\t{jogador['posição']}")
     print(f"Nivel de Exp.:\t{jogador['experiencia']}")
 
-def menu():
-    while True:
-        print("\n--- Menu ---")
-        print("1. Incluir Jogadores")
-        print("2. Exibir Jogadores")
-        print("3. Editar Jogadores")
-        print("4. Remover Jogadores")
-        print("5. Sair")
-        opcao = input("Escolha uma opção: ")
-        
-        if opcao == "1":
-            jogador = ler_pessoa()
-            jogadores.append(jogador)
-            print("Jogador cadastrado com sucesso.")
-        elif opcao == "2":
-            jogador = ler_pessoa()
-            if not jogadores:
-                print("Nenhum jogador cadastrado.")
-            else:
-                exibir_jogadores()
-        elif opcao =="3":
-            if not jogadores:
+def exibir_jogadores():
+    for i, jogador in enumerate(jogadores):
+        print(f"\n Jogador {i+1}")
+        imprimir_jogador(jogador)
+
+imprimir_jogador(jogador):
+    print("\n--- Dados do Jogador ---")
+    print(f"Nome:          {jogador['nome']}")
+    print(f"Data de Nasc.: {jogador['dataNascimento'].strftime('%d/%m/%Y')}")
+    print(f"Altura:        {jogador['altura']} m")
+    print(f"Sexo:          {jogador['sexo']}")
+    print(f"Posição:       {jogador['posição']}")
+    print(f"Experiência:   {jogador['experiencia']}")
+
+def exibir_jogadores():
+    if not jogadores:
+        print("Nenhum jogador cadastrado.")
+    else:
+        for i, jogador in enumerate(jogadores):
+            print(f"\nJogador {i+1}")
+            imprimir_jogador(jogador)
+
+def incluir_jogador():
+    if len(jogadores) < 3:
+        jogador = ler_pessoa()
+        jogadores.append(jogador)
+        print("Jogador cadastrado com sucesso.")
+    else:
+        print("Limite de 3 jogadores atingido.")
+
+def editar_jogador():
+    if not jogadores:
                 print("Nenhum jogador para editar.")
             else:
                 exibir_jogadores()
@@ -113,8 +121,9 @@ def menu():
                     print("Jogador atualizado com sucesso.")
                 else:
                     print("Número inválido.")
-        elif opcao == "4":
-            if not jogadores:
+
+def remover_jogador():
+    if not jogadores:
                 print("Nenhum jogador para remover.")
             else:
                 exibir_jogadores()
@@ -124,18 +133,35 @@ def menu():
                     print("Jogador removio com sucesso.")
                 else:
                     print("Número inválido.")
+
+def menu():
+    while True:
+        print("\n--- Menu ---")
+        print("1. Incluir Jogador")
+        print("2. Exibir Jogadores")
+        print("3. Editar Jogador")
+        print("4. Remover Jogador")
+        print("5. Sair")
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            incluir_jogador()
+        elif opcao == "2":
+            exibir_jogadores()
+        elif opcao == "3":
+            editar_jogador()
+        elif opcao == "4":
+            remover_jogador()
         elif opcao == "5":
             print("Saindo...")
             break
         else:
             print("Opção inválida. Tente novamente.")
 
-def exibir_jogadores():
-    for i, jogador in enumerate(jogadores):
-        print(f"\n Jogador {i+1}")
-        imprimir_jogador(jogador)
-
-print(f'seja bem vindo as inscrições para o time de vôlei!')
+print("Seja bem-vindo às inscrições para o time de vôlei!")
 menu()
+
+
+
 
 
