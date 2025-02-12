@@ -10,11 +10,15 @@ def ler_valor_nao_vazio(nome_variavel):
     return valor_lido
 
 def ler_altura(valor_altura):
-    valor_lido = float(input(f'Defina o {valor_altura} em metros.:')).strip().lower()
-    if valor_lido < 0.83 or valor_lido > 2.51:
-        print(f'invalido! o valor para {valor_altura} não pode ser este.')
-        valor_lido = input(f'defina o {valor_altura} em metros.:').strip().lower()
-    return valor_lido
+    while True:
+        try:
+            valor_lido = float(input(f'Defina a {valor_altura} em metros: '))
+            if 0.83 <= valor_lido <= 2.51:
+                return valor_lido
+            else:
+                print(f'Inválido! O valor para {valor altura} deve estar entre 0.83 e 2.51 metros.')
+        except ValueError:
+            print(f'Inválido! Digite um número válido para {valor_altura}.')
 
 def ler_sexo(valor_sexo):
     valor_lido = input(f'Defina o {valor_sexo} como masculino ou feminino:').strip().lower()
@@ -48,7 +52,17 @@ def ler_experiencia(valor_exp):
 def ler_pessoa():
     print("\n--- Cadastro do Jogador ---")
     nome = ler_valor_nao_vazio('nome')
-    dataNascimentoString = input('Digite sua data de nascimento(dd/mm/aaaa): ')
+    While True:
+     dataNascimentoString = input('Digite sua data de nascimento(dd/mm/aaaa): ')
+     try:
+            dataNascimento = datetime.strptime(dataNascimentoString, "%d/%m/%Y")
+            if dataNascimento > datetime.now():
+                print('Data inválida. Não pode ser uma data futura.')
+            else:
+                break
+        except ValueError:
+            print('Data inválida. Use o formato dd/mm/aaaa.')
+
     
     try:
         dataNascimento = datetime.strptime(dataNascimentoString, "%d/%m/%Y")
